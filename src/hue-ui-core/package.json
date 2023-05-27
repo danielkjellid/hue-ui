@@ -1,0 +1,21 @@
+{
+  "name": "@hue-ui/core",
+  "description": "React components library focused on usability, accessibility and developer experience",
+  "version": "0.0.1",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "author": "Daniel Kjellid <daniel@kjellid.no>",
+  "sideEffects": false,
+  "peerDependencies": {
+    "@hue-ui/hooks": "0.0.1",
+    "react": "18.1.0",
+    "react-dom": "18.2.0"
+  },
+  "dependencies": {
+    "@hue-ui/utils": "0.0.1",
+    "@hue-ui/styles": "0.0.1"
+  },
+  "devDependencies": {}
+}
