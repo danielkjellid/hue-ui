@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": [
+    "src/hue-*/src",
+    "./bin",
+    "./types",
+    "./config",
+    "./config/types",
+  ],
+  "exclude": [
+    "public",
+    ".cache",
+    "node_modules",
+    "src/hue-*/esm/**/*",
+    "src/hue-*/lib/**/*",
+    "src/hue-*/cjs/**/*"
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@hue-ui/*": ["src/hue-*/src"],
+    }
+  }
+}

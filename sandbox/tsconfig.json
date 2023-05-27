@@ -1,0 +1,31 @@
+{
+  "extends": "../tsconfig.base.json",
+  "include": ["src", "src/App.tsx", "src/main.tsx", "vite-env.d.ts"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@hue-ui/core": ["../src/hue-ui-core/src"],
+      "@hue-ui/hooks": ["../src/hue-ui-hooks/src"],
+      "@hue-ui/styles": ["../src/hue-ui-styles/src"],
+      "@hue-ui/utils": ["../src/hue-ui-utils/src"],
+    }
+  },
+  "references": [{ "path": "./tsconfig.node.json" }, {"path": "../src/hue-ui-core"}, {"path": "../src/hue-ui-hooks"}, {"path": "../src/hue-ui-styles"}, {"path": "../src/hue-ui-utils"}]
+}

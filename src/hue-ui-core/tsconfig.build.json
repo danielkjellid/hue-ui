@@ -1,0 +1,34 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "include": ["./src", "../../config/types", "../../tests"],
+  "exclude": [
+    "./lib",
+    "./esm",
+    "./cjs",
+    "**/*.story.tsx",
+    "**/*.test.tsx",
+    "**/*.test.ts",
+    "**/styles.api.ts",
+    "src/components/*/demos/*",
+    "src/demos.ts"
+  ],
+  "compilerOptions": {
+    "rootDir": "src",
+    "baseUrl": ".",
+    "outDir": "lib",
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "lib",
+    "composite": true,
+    "paths": {
+      "@hue-ui/hooks": ["../hue-ui-hooks/src"],
+      "@hue-ui/styles": ["../hue-ui-styles/src"],
+      "@hue-ui/utils": ["../hue-ui-utils/src"],
+    }
+  },
+  "references": [
+    { "path": "../hue-ui-hooks" },
+    { "path": "../hue-ui-utils" },
+    { "path": "../hue-ui-styles" },
+  ]
+}
