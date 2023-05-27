@@ -8,9 +8,6 @@
     "**/*.story.tsx",
     "**/*.test.tsx",
     "**/*.test.ts",
-    "**/styles.api.ts",
-    "src/components/*/demos/*",
-    "src/demos.ts"
   ],
   "compilerOptions": {
     "composite": true,
