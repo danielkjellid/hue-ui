@@ -9,16 +9,20 @@ module.exports = {
     'airbnb',
     'eslint:recommended',
     'plugin:import/recommended',
-    'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    'plugin:import/typescript',
     'prettier',
   ],
   ignorePatterns: ['node_modules/'],
   settings: {
     react: {
       version: 'detect',
+    },
+    'import/resolver': {
+      node: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+      typescript: {},
     },
   },
   rules: {
