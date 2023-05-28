@@ -21,6 +21,25 @@ So why did i create my own? Well, I often found myself arguing with existing pac
 - `@hue-ui/hooks` - collection of hooks for state and UI management, exports everything from @hue-ui/styles
 - `@hue-ui/styles` - providers that help define different stylistic settings that's used in all components
 
+## Installation
+
+TBA...
+
+Make sure to add the generated css to your apps entrypoint
+
+```
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.tsx'
+import '@hue-ui/styles/esm/styles.css' // Add this line.
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
+```
+
 ## License
 
 MIT

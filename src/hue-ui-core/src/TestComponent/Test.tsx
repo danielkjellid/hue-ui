@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Test() {
-  return <p>This is test</p>
+  return <p className="text-red-800">This is test</p>
 }
 
 export { Test }

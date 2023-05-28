@@ -9,7 +9,11 @@ import nodeExternals from 'rollup-plugin-node-externals'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import path from 'path'
 import replace from '@rollup/plugin-replace'
+import postcss from 'rollup-plugin-postcss'
+import autoprefixer from 'autoprefixer'
 import visualizer from 'rollup-plugin-visualizer'
+import tailwindcss from 'tailwindcss'
+import tailwindConfig from '../../tailwind.config'
 import { getPackages } from '../../bin/utils/get-packages'
 
 interface PkgConfigInput {
@@ -46,6 +50,16 @@ export default async function createPackageConfig(config: PkgConfigInput): Promi
     json(),
     alias({ entries: aliasEntries }),
     replace({ preventAssignment: true }),
+    postcss({
+      config: {
+        path: '../../.postcss.config.js',
+        ctx: undefined,
+      },
+      extensions: ['.css'],
+      minimize: true,
+      extract: 'styles.css',
+      plugins: [autoprefixer(), tailwindcss(tailwindConfig)],
+    }),
   ]
 
   let externals

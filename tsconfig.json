@@ -17,7 +17,7 @@
   ],
   "compilerOptions": {
     "paths": {
-      "@hue-ui/*": ["src/hue-*/src"],
+      "@hue-ui/*": ["src/hue-ui-*/src"],
     }
   }
 }
