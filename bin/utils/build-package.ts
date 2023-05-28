@@ -18,9 +18,7 @@ export interface BuildOptions {
 
 export async function buildPackage(_packageName: string, options?: BuildOptions) {
   const packageName = getPackageName(_packageName)
-  console.log(packageName)
   const packagePath = await locatePackage(packageName || '')
-  console.log(packagePath)
 
   if (!packagePath) {
     logger.error(`Package ${chalk.cyan(packageName)} does not exist`)
