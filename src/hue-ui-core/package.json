@@ -10,8 +10,8 @@
   "sideEffects": false,
   "peerDependencies": {
     "@hue-ui/hooks": "0.0.1",
-    "react": "18.1.0",
-    "react-dom": "18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "@hue-ui/utils": "0.0.1",
