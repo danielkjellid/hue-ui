@@ -1,0 +1,42 @@
+name: CI
+
+on: push
+
+jobs:
+  lint:
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: 'eslint'
+            check: 'eslint:check'
+          - name: 'prettier'
+            check: 'prettier:check'
+          - name: 'import-sort'
+            check: 'import-sort:check'
+          - name: 'tsc'
+            check: 'tsc:check'
+          - name: 'syncpack'
+            check: 'syncpack:check'
+    name: ${{ matrix.name }}
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v3
+      - name: Setup project
+        uses: ./.github/actions/setup-node
+      - name: Run ${{ matrix.name }}
+        run: npm run ${{ matrix.check }}
+
+  tests:
+    name: tests
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v3
+      - name: Setup project
+        uses: ./.github/actions/setup-node
+      - name: Run tests
+        run: npm test

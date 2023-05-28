@@ -1,6 +1,6 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['jsx-a11y', '@typescript-eslint', 'react-hooks', 'react-refresh'],
+  plugins: ['jsx-a11y', '@typescript-eslint', 'react-hooks', 'react-refresh', 'import'],
   env: {
     browser: true,
     es2021: true,
@@ -9,16 +9,22 @@ module.exports = {
     'airbnb',
     'eslint:recommended',
     'plugin:import/recommended',
-    'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    'plugin:import/typescript',
     'prettier',
   ],
   ignorePatterns: ['node_modules/'],
   settings: {
     react: {
       version: 'detect',
+    },
+    'import/resolver': {
+      node: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+      typescript: {
+        project: ['tsconfig.json', 'src/*/tsconfig.json', 'sandbox/tsconfig.json'],
+      },
     },
   },
   rules: {
