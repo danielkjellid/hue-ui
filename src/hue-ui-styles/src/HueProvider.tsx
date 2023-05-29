@@ -1,5 +1,6 @@
-import React, { createContext, useMemo } from 'react'
 import './styles.css'
+
+import React, { createContext, useMemo } from 'react'
 
 interface HueContextType {
   theme: any
