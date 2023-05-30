@@ -19,7 +19,7 @@
   "references": [
     // { "path": "../hue-hooks" },
     // { "path": "../hue-utils" },
-    // { "path": "../hue-styles" },
+    { "path": "../hue-ui-styles" },
     // { "path": "../hue-tests" },
     // { "path": "../hue-storybook" }
   ]

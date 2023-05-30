@@ -26,7 +26,7 @@
     "paths": {
       "@hue-ui/core": ["../src/hue-ui-core/src"],
       "@hue-ui/hooks": ["../src/hue-ui-hooks/src"],
-      "@hue-ui/styles": ["../src/hue-ui-styles/src"],
+      "@hue-ui/styles/*": ["../src/hue-ui-styles/src"],
       "@hue-ui/utils": ["../src/hue-ui-utils/src"],
     }
   },
