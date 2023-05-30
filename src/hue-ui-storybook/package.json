@@ -1,0 +1,14 @@
+{
+  "name": "@hue-ui/storybook",
+  "private": true,
+  "version": "0.0.1",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "author": "Daniel Kjellid <daniel@kjellid.no>",
+  "keywords": [],
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
