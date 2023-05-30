@@ -13,6 +13,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:import/typescript',
+    'plugin:tailwindcss/recommended',
     'prettier',
   ],
   ignorePatterns: ['node_modules/'],
