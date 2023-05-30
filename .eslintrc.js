@@ -14,6 +14,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:import/typescript',
     'plugin:tailwindcss/recommended',
+    'plugin:storybook/recommended',
     'prettier',
   ],
   ignorePatterns: ['node_modules/'],
@@ -22,7 +23,9 @@ module.exports = {
       version: 'detect',
     },
     'import/resolver': {
-      node: { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
       typescript: {
         project: ['tsconfig.json', 'src/*/tsconfig.json', 'sandbox/tsconfig.json'],
       },
@@ -36,7 +39,12 @@ module.exports = {
     'import/extensions': 'off',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-inferrable-types': 'off',
-    'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
+    'react/jsx-filename-extension': [
+      'error',
+      {
+        extensions: ['.tsx'],
+      },
+    ],
     'react-refresh/only-export-components': 'warn',
     'react/react-in-jsx-scope': 'off',
   },
