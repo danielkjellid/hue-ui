@@ -84,7 +84,7 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-visualizer": "^5.9.0",
     "storybook": "^7.0.18",
-    "syncpack": "^9.8.6",
+    "syncpack": "^10.1.0",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.0.4",
     "vite": "^4.3.8",
