@@ -93,7 +93,7 @@
     "tailwindcss-animate": "^1.0.6",
     "typescript": "^5.0.4",
     "vite": "^4.3.8",
-    "vitest": "^0.31.1",
+    "vitest": "^0.32.0",
     "yargs": "^17.7.2"
   },
   "dependencies": {
