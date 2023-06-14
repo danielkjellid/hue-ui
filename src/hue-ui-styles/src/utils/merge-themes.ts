@@ -1,4 +1,4 @@
-import { HueTheme } from 'src/types/HueTheme'
+import { HueTheme } from '../types/HueTheme'
 import { formatProperties, formatAsCSSVar } from './format-properties'
 
 /**
