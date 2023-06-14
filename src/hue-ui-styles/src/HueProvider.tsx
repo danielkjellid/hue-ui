@@ -1,6 +1,6 @@
 import './styles.css'
 
-import React, { createContext, useEffect, useMemo } from 'react'
+import React, { createContext, useContext, useEffect, useMemo } from 'react'
 
 import { HueTheme } from './types/HueTheme'
 import { themeToCssVars } from './utils/merge-themes'
@@ -10,6 +10,10 @@ interface HueContextType {
 }
 
 const HueContext = createContext<HueContextType>({ theme: {} })
+
+function useHueTheme() {
+  return useContext(HueContext).theme
+}
 
 export interface HueProviderProps {
   theme?: HueTheme
@@ -34,4 +38,4 @@ function HueProvider({ theme, children }: HueProviderProps) {
 
 HueProvider.displayName = '@hue-ui/core/HueProvider'
 
-export { HueProvider }
+export { HueProvider, useHueTheme }

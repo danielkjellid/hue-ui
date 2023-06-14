@@ -48,5 +48,6 @@ module.exports = {
     'react-refresh/only-export-components': 'warn',
     'react/react-in-jsx-scope': 'off',
     'react/require-default-props': 'off',
+    'react-refresh/only-export-components': 'off',
   },
 }
