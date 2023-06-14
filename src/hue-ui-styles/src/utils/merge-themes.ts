@@ -1,5 +1,6 @@
+import { formatAsCSSVar, formatProperties } from './format-properties'
+
 import { HueTheme } from '../types/HueTheme'
-import { formatProperties, formatAsCSSVar } from './format-properties'
 
 /**
  * Convert certain configuration keys in the theme object to css variables.
