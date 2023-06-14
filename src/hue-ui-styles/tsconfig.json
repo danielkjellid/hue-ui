@@ -3,12 +3,20 @@
   "include": ["./src", "../../config/types"],
   "exclude": ["./lib", "./esm", "./cjs"],
   "compilerOptions": {
-    "composite": true,
     "rootDir": "src",
     "baseUrl": ".",
     "outDir": "lib",
     "declaration": true,
     "declarationMap": true,
-    "declarationDir": "lib"
-  }
+    "declarationDir": "lib",
+    "composite": true,
+    "paths": {
+      "@hue-ui/tests": ["../hue-ui-tests/src"],
+      "@hue-ui/utils": ["../hue-ui-utils/src"],
+    }
+  },
+  "references": [
+    { "path": "../hue-ui-tests"},
+    { "path": "../hue-ui-utils" },
+  ]
 }

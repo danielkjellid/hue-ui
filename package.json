@@ -46,6 +46,7 @@
     "@storybook/react-vite": "^7.0.18",
     "@storybook/testing-library": "^0.0.14-next.2",
     "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "@types/fs-extra": "^11.0.1",
     "@types/node": "^20.2.3",
     "@types/react": "^18.2.7",

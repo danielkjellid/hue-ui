@@ -2,17 +2,26 @@ import './styles.css'
 
 import React, { createContext, useContext, useEffect, useMemo } from 'react'
 
+import { validateContext } from '@hue-ui/utils'
 import { HueTheme } from './types/HueTheme'
 import { themeToCssVars } from './utils/merge-themes'
 
-interface HueContextType {
+export interface HueContextProps {
   theme: HueTheme
 }
 
-const HueContext = createContext<HueContextType>({ theme: {} })
+const HueContext = createContext<HueContextProps>(null)
 
 function useHueTheme() {
-  return useContext(HueContext).theme
+  const ctx = useContext(HueContext)
+
+  validateContext<HueContextProps>({
+    context: ctx,
+    hookName: 'useHueTheme',
+    providerName: 'HueProvider',
+  })
+
+  return ctx.theme
 }
 
 export interface HueProviderProps {

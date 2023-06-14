@@ -1,0 +1,11 @@
+{
+  "name": "@hue-ui/tests",
+  "private": true,
+  "version": "6.0.11",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "author": "Daniel Kjellid <daniel@kjellid.no>",
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {}
+}

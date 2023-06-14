@@ -11,6 +11,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "@hue-ui/utils": "0.0.1"
+  },
+  "devDependencies": {
+    "@hue-ui/tests": "0.0.1"
+  }
 }
