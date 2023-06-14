@@ -1,21 +1,36 @@
 import './styles.css'
 
-import React, { createContext, useMemo } from 'react'
+import React, { createContext, useEffect, useMemo } from 'react'
+import { HueTheme } from './types/HueTheme'
+import { themeToCssVars } from './utils/merge-themes'
 
 interface HueContextType {
-  theme: any
+  theme: HueTheme
 }
 
-const HueContext = createContext<HueContextType>({ theme: undefined })
+const HueContext = createContext<HueContextType>({ theme: {} })
 
 export interface HueProviderProps {
+  theme?: HueTheme
   children: React.ReactNode
 }
 
-function HueProvider({ children }: HueProviderProps) {
-  const theme = useMemo(() => ({ theme: 'dummy2' }), [])
+function HueProvider({ theme, children }: HueProviderProps) {
+  const ctxValues = useMemo(() => ({ theme }), [theme])
 
-  return <HueContext.Provider value={theme}>{children}</HueContext.Provider>
+  useEffect(() => {
+    const styleSheet = document.documentElement.style
+    const cssVars = themeToCssVars({ theme: ctxValues.theme })
+
+    Object.entries(cssVars.colors).map(([key, value]) => {
+      styleSheet.setProperty(key, value as string)
+      return undefined
+    })
+  })
+
+  return <HueContext.Provider value={ctxValues}>{children}</HueContext.Provider>
 }
+
+HueProvider.displayName = '@hue-ui/core/HueProvider'
 
 export { HueProvider }
